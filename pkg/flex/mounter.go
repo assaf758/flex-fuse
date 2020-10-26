@@ -181,6 +181,7 @@ func (m *Mounter) createV3IOFUSEContainer(spec *Spec, targetPath string) error {
 		"--connection_strings", dataUrls,
 		"--mountpoint", "/fuse_mount",
 		"--session_key", spec.GetAccessKey(),
+		"-d",
 	}
 
 	V3ioConfigPath := m.Config.V3ioConfigPath
